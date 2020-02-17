@@ -82,7 +82,7 @@ export class Favorite extends Component {
                                 onPress={() => {  }}
                                 style={[{ marginTop: -40 }, styles.shadowBoxBtn]}>
                                 {/* <Image source={send} style={styles.iconImg} /> */}
-                                <Text sty
+                                <Text style={{fontSize:20}}
                                 >Next --></Text>
                             </TouchableOpacity>
                 </View>
