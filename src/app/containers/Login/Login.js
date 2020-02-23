@@ -101,6 +101,13 @@ export class Login extends Component {
                     />
                 </View>
 
+                <TouchableOpacity activeOpacity={0.8}
+                                onPress={() => {  }}
+                                style={[{ marginTop: -40 }, styles.shadowBoxBtn]}>
+                                {/* <Image source={send} style={styles.iconImg} /> */}
+                                <Text style={{fontSize:20}}
+                                >Next --></Text>
+                            </TouchableOpacity>
 
             </Container>
         );

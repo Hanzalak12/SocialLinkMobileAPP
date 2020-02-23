@@ -65,7 +65,7 @@ export class Favorite extends Component {
                             borderTopRightRadius: 5,
                             fontWeight: 'bold',
                             fontSize: 15
-                        }}>  HEIGHT {this.state.FoodList[this.state.selectedFeet]} </Text>
+                        }}>  {this.state.FoodList[this.state.selectedFeet]} </Text>
                         <View style={{ flexDirection: 'row', backgroundColor: 'red', width: width - 40, height: width - 40 - 50 }}>
                             <Picker style={{ width: (width - 40), height:height/3 }}
                                 selectedValue={this.state.feetList}
