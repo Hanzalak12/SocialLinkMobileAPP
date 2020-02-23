@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Text, TextInput, View, TouchableOpacity, Dimensions, Image } from "react-native";
 import styles from "./Style";
 
+import PaymentStyle from '../paymentPage/PaymentStyle';
 const Picker = require('react-native-wheel-picker');
 const { width,height } = Dimensions.get('window');
 const PickerItem = Picker.Item;

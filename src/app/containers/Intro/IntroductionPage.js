@@ -43,11 +43,10 @@ export class Introduction extends Component {
                     />
                 </View>
                 <View style={styles.backgroundVideoView} >
-                    <Video source={{ uri: "../../../assest\Video\video-7.mp4" }}
-                        ref={(ref) => {
-                            this.player = ref
-                        }}                                 // Callback when video cannot be loaded
-                        style={styles.backgroundVideo} />
+                <Image
+                        style={styles.backgroundVideo}
+                        source={{ uri: "https://i.ytimg.com/vi/zjnNOCNpNu4/maxresdefault.jpg" }}
+                    />
                 </View>
                 <View>
                     <Switch style={styles.switchButton} value={true}></Switch>

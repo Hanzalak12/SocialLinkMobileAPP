@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import { Dimensions, Image, ImageBackground, TextInput, Switch, TouchableOpacity, View, StatusBar, ScrollView, CheckBox, AsyncStorage } from "react-native";
+import { StyleSheet, Dimensions, Image, ImageBackground, TextInput, Switch, TouchableOpacity, View, StatusBar, ScrollView, CheckBox, AsyncStorage } from "react-native";
 // import { NavigationScreenProps } from "react-navigation";
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
-import styles from "./Style";
-import _ from "lodash";
-import axios from "axios";
+// import styles from "./Style";
+// import _ from "lodash";
+// import axios from "axios";
 import DatePicker from "react-native-datepicker"
 
 // import ImagePicker from 'react-native-image-picker';
-import Video from 'react-native-video';
+// import Video from 'react-native-video';
 
-const { width } = Dimensions.get('window');
-const vi = require("../../../assest/Video/video-7.mp4")
+const { width,height } = Dimensions.get('window');
+// const vi = require("../../../assest/Video/video-7.mp4")
 
 
 // const gear = require('../../../assest/Images/gear.png');
@@ -38,7 +38,7 @@ export class MyProfile extends Component {
 
     render() {
         return (
-            <Container >
+            <View >
                 <View style={{ flexDirection: 'row', width: width, padding: 20, justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 25, fontWeight: 'bold', color: 'black' }}></Text>
                     <View style={{ flexDirection: 'row' }}>
@@ -102,8 +102,201 @@ export class MyProfile extends Component {
                 </View>
 
 
-            </Container>
+            </View>
         );
     }
 }
 
+
+const styles = StyleSheet.create({
+    header:{
+        flexDirection: 'row', width: width, padding: 10, justifyContent: 'space-between',backgroundColor:'red',
+        ...Platform.select({
+            ios: {
+                shadowColor: 'rgba(61,39,255,0.2)',
+                shadowOffset: {
+                    width: 5,
+                    height: 5
+                },
+                shadowRadius: 5,
+                shadowOpacity: 0.8
+            },
+            android: {
+                elevation: 8,
+            },
+        }),
+    },
+    container: {
+        flex: 1,
+        width: width,
+        backgroundColor: '#ffffff'
+    },
+    itemRoot: {
+        flexDirection: 'column', 
+        alignItems: 'center', 
+        width: width
+    },
+    posImgContainer: {
+        height: '100%',
+        width: '100%',
+        borderRadius: 5,
+        overflow: 'hidden',
+        backgroundColor: '#fff',
+        ...Platform.select({
+            ios: {
+                shadowColor: 'rgba(61,39,255,0.2)',
+                shadowOffset: {
+                    width: 5,
+                    height: 5
+                },
+                shadowRadius: 5,
+                shadowOpacity: 0.8
+            },
+            android: {
+                elevation: 8,
+            },
+        }),
+    },
+    posImg: {
+        tintColor: 'rgb(26, 26, 26)',
+        width: 20,
+        height: 20,
+        resizeMode: 'cover'
+    },
+    iconImg: {
+        width: 20,
+        height: 20,
+        resizeMode: 'contain',
+    },
+    iconContainer: {
+        marginLeft: 20,
+        marginRight: 20,
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+        // overflow: false,
+        backgroundColor: '#fff',
+        ...Platform.select({
+            ios: {
+                shadowColor: 'rgba(61,39,255,0.2)',
+                shadowOffset: {
+                    width: 5,
+                    height: 5
+                },
+                shadowRadius: 5,
+                shadowOpacity: 0.8
+            },
+            android: {
+                elevation: 8,
+            },
+        }),
+    },
+    headerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        width: width,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+        justifyContent: 'space-between',
+    },
+    smallText: {
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: 12
+    },
+    descRow: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        width: width,
+        padding: 10
+    },
+    smallIcon: {
+        height: 20,
+        width: 20,
+        resizeMode: 'contain',
+        marginRight: 10,
+        tintColor: 'black'
+    },
+    shadowBox: {
+        marginHorizontal: 10,
+        marginVertical: 5,
+        marginBottom: 10,
+        marginTop: 10,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 25,
+        backgroundColor: '#fff',
+        ...Platform.select({
+            ios: {
+                shadowColor: 'rgba(61,39,255,0.2)',
+                shadowOffset: {
+                    width: 5,
+                    height: 5
+                },
+                shadowRadius: 5,
+                shadowOpacity: 0.8
+            },
+            android: {
+                elevation: 8,
+            },
+        }),
+    },
+    photoContainer: {
+
+        width: width / 5,
+        height: width / 5,
+        borderRadius: width / 10,
+        ...Platform.select({
+            ios: {
+                shadowColor: 'rgba(61,39,255,0.2)',
+                shadowOffset: {
+                    width: 5,
+                    height: 5
+                },
+                shadowRadius: 5,
+                shadowOpacity: 0.8
+            },
+            android: {
+                elevation: 8,
+            },
+        }),
+    },
+    itemSubContainer: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    descGroup: {
+        flexDirection: 'column',
+        paddingLeft: 10,
+        width: width / 4 * 3
+    },
+    name: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: 'black'
+    },
+    desc: {
+        fontSize: 15
+    },
+    photo: {
+        width: width / 5,
+        height: width / 5,
+        borderRadius: width / 10,
+        resizeMode: 'cover',
+    },
+    itemContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginLeft: 20,
+        marginRight: 20,
+        borderTopWidth: 1,
+        paddingTop: 20,
+        paddingBottom: 20,
+        borderColor: '#dadada'
+    }
+});
