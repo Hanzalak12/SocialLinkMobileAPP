@@ -55,7 +55,7 @@ export class DOB extends Component {
     }
     render() {
         return (
-            <View>
+            <View style={{marginTop:50}}> 
                 <View style={styles.logoView}>
                     <Image
                         style={styles.logo}
@@ -77,7 +77,7 @@ export class DOB extends Component {
                         }}>  {this.state.Day[this.state.selectedDay] +"/"+this.state.Month[this.state.selectedMonth] +"/"+this.state.Year[this.state.selectedYear]} </Text>
                         <View style={{ flexDirection: 'row', backgroundColor: 'red', width: width - 40, height: width - 40 - 50 }}>
                             <Picker style={{ width: (width - 40)/3, height:height/3 }}
-                                selectedValue={this.state.Day}
+                                selectedValue={this.state.selectedDay}
                                 itemStyle={{ color: "black", fontSize: 25 }}
                                 onValueChange={(index) => { this.onPickerSelectDay(index); }}>
                                 {this.state.Day.map((value, i) => (
@@ -85,7 +85,7 @@ export class DOB extends Component {
                                 ))}
                             </Picker>
                             <Picker style={{ width: (width - 40)/3, height:height/3 }}
-                                selectedValue={this.state.Month}
+                                selectedValue={this.state.selectedMonth}
                                 itemStyle={{ color: "black", fontSize: 25 }}
                                 onValueChange={(index) => { this.onPickerSelectMonth(index); }}>
                                 {this.state.Month.map((value, i) => (
@@ -94,7 +94,7 @@ export class DOB extends Component {
                             </Picker>
                             
                             <Picker style={{ width: (width - 40)/3, height:height/3 }}
-                                selectedValue={this.state.Year}
+                                selectedValue={this.state.selectedYear}
                                 itemStyle={{ color: "black", fontSize: 25 }}
                                 onValueChange={(index) => { this.onPickerSelectYear(index); }}>
                                 {this.state.Year.map((value, i) => (

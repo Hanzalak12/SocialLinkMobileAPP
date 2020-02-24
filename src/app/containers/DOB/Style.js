@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         fontSize:10,
         ...Platform.select({
             ios: {
-                shadowColor: 'rgba(61,39,255,0.2)',
+                shadowColor: 'red',
                 shadowOffset: {
                     width: 5,
                     height: 5

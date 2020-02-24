@@ -46,7 +46,7 @@ export class Favorite extends Component {
     }
     render() {
         return (
-            <View>
+            <View style={{marginTop:50}}>
                 <View style={styles.logoView}>
                     <Image
                         style={styles.logo}
